@@ -49,7 +49,7 @@ table {
 *{
     box-sizing:border-box;
     max-width:100%; /*you can never be bigger than your parent - this is going to stop that dreaded horizontal scroll bar*/
-    border:1px solid red;
+    /* border:1px solid red; */
 }
 /*general styles*/
 html{
@@ -63,6 +63,7 @@ body{
 h1, h2, h3{
     letter-spacing: 3px;
     text-align:center;
+    font-family: 'Gaegu', cursive;
 }
 h1{
     font-size:5rem;
@@ -208,4 +209,101 @@ footer a {
 .copyright {
     text-align: right;
     margin-right: 10%;
+}
+
+/* tablet styles */
+@media(max-width: 800px) {
+    * {
+        /* border:1px solid cyan; */
+    }
+
+    #about {
+        background-position: top;
+    }
+
+    #about div {
+        width: 35%;
+        margin-top: 5%;
+    }
+
+    .container .text div {
+        width: 75%;
+    }
+}
+
+@media(max-width: 300px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo {
+        width: 25%;
+    }
+    .logo img { 
+        width: 75%;
+    }
+    
+    .links {
+        width: 100%;
+    }
+
+    .cta button {
+        display: none;
+    }
+
+    #about {
+        background-position: right;
+        justify-content: center;
+    }
+    
+    #about div {
+        width: 60%;
+        margin-right: 0;
+        /* margin-left: 10%; */
+    }
+
+    .container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    
+    .container div {
+        width: 90%;
+    }
+    
+    .container .text {
+        width: 90%;
+    }
+    
+    .bg {
+        height: 60vh;
+    }
+
+    .mobile {
+        flex-direction: column-reverse;
+    }
+
+    .footer-parent {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .left, .right {
+        width: 80%;
+    }
+    
+    .text-container {
+        text-align: center;
+    }
+    
+    .img-wrapper {
+        width: 100%;
+    }
+    
+    .copyright {
+        text-align: center;
+        margin-right: 0;
+    }
 }
